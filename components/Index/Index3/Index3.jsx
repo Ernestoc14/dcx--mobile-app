@@ -4,23 +4,26 @@ import { useNavigation } from '@react-navigation/native';
 import { router, Link } from "expo-router";
 import ThemeContext from '../../../theme/ThemeContext';
 
+// First Screen (Welcome Page)
+
 const Index3 = ({ activePageIndex, totalPages, handleNextPress }) => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   const navigation = useNavigation();
   const handleCreateAccountPress = () => {
-    router.push('lets'); 
+    router.push('lets');
+    // Redirect to Login Page
   };
   return (
     <View style={styles.page_button_container}>
       {activePageIndex === totalPages - 1 ? (
         <View>
           <TouchableOpacity style={styles.nextButton} onPress={handleCreateAccountPress}>
-           <Text style={styles.button_text}>next</Text>
+            <Text style={styles.button_text}>siguiente</Text>
           </TouchableOpacity>
         </View>
       ) : (
         <TouchableOpacity onPress={handleNextPress} style={styles.nextButton}>
-          <Text style={styles.button_text}>next</Text>
+          <Text style={styles.button_text}>siguiente</Text>
         </TouchableOpacity>
       )}
     </View>
@@ -32,7 +35,7 @@ export default Index3;
 const styles = StyleSheet.create({
   page_button_container: {
     paddingHorizontal: 20,
-    marginBottom: 50,    
+    marginBottom: 50,
   },
   nextButton: {
     backgroundColor: '#836EFE',

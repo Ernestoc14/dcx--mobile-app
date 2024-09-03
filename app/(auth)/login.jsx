@@ -7,33 +7,36 @@ import { Montserrat_500Medium, Montserrat_700Bold } from '@expo-google-fonts/mon
 import Login_section2 from '../../components/Login/Login_section2/Login_section2';
 import Button from '../../components/Button/Button';
 import { router, Link } from "expo-router";
-import Log_method from '../../components/Log_method/Log_method';
 import ThemeContext from '../../theme/ThemeContext';
+
+// Login Screen (Main Login Screen)
 
 const login = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   const back = () => {
     router.push('lets');
+    // Redirect to new page
   };
   return (
-    <View style={[styles.container, {backgroundColor:theme.background}]}>
-       <TouchableOpacity onPress={back}>
-          {darkMode ? <Dark_back /> : <Back />}
-        </TouchableOpacity>
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
+      <TouchableOpacity onPress={back}>
+        {darkMode ? <Dark_back /> : <Back />}
+      </TouchableOpacity>
       <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={styles.head_content}>
-        <Head />
-        <Text style={[styles.heading, {color:theme.color}]}>Welcome Back! 👋🏻</Text>
-        <Text style={[styles.heading_text, {color:theme.color3}]}>We're glad to see you again. Log in to access your account and explore our latest features.</Text>
-      </View>
-      <Login_section2 />
-      <View style={styles.bottom_row}>
-        <View style={styles.line}></View>
-        <Text style={styles.or}>Or continue with</Text>
-        <View style={styles.line}></View>
-      </View>
-      <Log_method />
-      <Text style={[styles.bottom_text, {color:theme.color3}]}>Don’t have an account?<Link href='/signup' style={styles.link}> Sign up</Link></Text>
+        <View style={styles.head_content}>
+          <Head />
+          <Text style={[styles.heading, { color: theme.color }]}>Hey, qué Xopa! 👋🏻</Text>
+          <Text style={[styles.heading_text, { color: theme.color3 }]}>Estamos felices de tenerte aqui en DCX.</Text>
+        </View>
+        <Login_section2 />
+        <View style={styles.bottom_row}>
+          <View style={styles.line}></View>
+          <Text style={styles.or}>Or continue with</Text>
+          <View style={styles.line}></View>
+        </View>
+        <Text style={[styles.bottom_text, { color: theme.color3 }]}>
+          <Link href='/signup' style={styles.link}> Sign up</Link>
+        </Text>
       </ScrollView>
     </View>
   )
@@ -56,8 +59,8 @@ const styles = StyleSheet.create({
     lineHeight: 34,
     fontFamily: 'Montserrat_700Bold',
     color: '#39335E',
-    textTransform: 'capitalize',
     textAlign: 'center',
+    textTransform: 'uppercase',
     marginTop: 20,
   },
   heading_text: {
@@ -75,29 +78,29 @@ const styles = StyleSheet.create({
     color: '#727272',
     marginVertical: 30,
     paddingBottom: 20,
-},
-link: {
+  },
+  link: {
     fontFamily: 'Montserrat_700Bold',
     color: '#836EFE',
-},
-bottom_row: {
+  },
+  bottom_row: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
     paddingHorizontal: 20,
     marginLeft: -20,
     marginVertical: 30,
-},
-line: {
+  },
+  line: {
     borderBottomColor: '#9C9C9C',
     borderBottomWidth: 0.5,
     width: '35%',
     paddingTop: 2,
-},
-or: {
+  },
+  or: {
     fontSize: 12,
     lineHeight: 15,
     fontFamily: 'Montserrat_400Regular',
     color: '#9C9C9C',
-}
+  }
 })

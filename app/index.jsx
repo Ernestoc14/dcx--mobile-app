@@ -10,6 +10,7 @@ import Index2 from "../components/Index/Index2/Index2";
 import Index3 from "../components/Index/Index3/Index3";
 import { SourceSansPro_400Regular, SourceSansPro_600SemiBold, SourceSansPro_700Bold } from "@expo-google-fonts/source-sans-pro";
 
+// Main Page - Home Page
 const { width } = Dimensions.get('window');
 SplashScreen.preventAutoHideAsync();
 

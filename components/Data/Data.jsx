@@ -53,17 +53,12 @@ export const pages = [
     {
         id: 1,
         image: Onboard1,
-        heading: 'Effortlessly Manage Your Deliveries from Pickup to Drop-off.',
+        heading: 'Mensaje Bienvenida 1.',
     },
     {
         id: 2,
         image: Onboard2,
-        heading: 'Stay Ahead with Real-Time Tracking and Efficient Logistics Solutions.',
-    },
-    {
-        id: 3,
-        image: Onboard3,
-        heading: 'Transforming Your Logistics Experience with Precision and Reliability.',
+        heading: 'Mensaje Bienvenida 2.',
     },
 ];
 

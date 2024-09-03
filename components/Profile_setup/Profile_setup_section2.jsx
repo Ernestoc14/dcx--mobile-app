@@ -7,6 +7,8 @@ import Button from '../../components/Button/Button';
 import { router, Link } from "expo-router";
 import ThemeContext from '../../theme/ThemeContext';
 
+// Create User Page
+
 const Profile_setup_section2 = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   return (

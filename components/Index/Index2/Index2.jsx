@@ -8,7 +8,7 @@ const Index2 = ({ theme, pages, activePageIndex, headingOpacity, descriptionOpac
   const { darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <View style={styles.onboard_content}>
-      <Animated.Text style={[[styles.heading, {color:theme.color}], { opacity: headingOpacity }]}>
+      <Animated.Text style={[[styles.heading, { color: theme.color }], { opacity: headingOpacity }]}>
         {pages[activePageIndex].heading}
       </Animated.Text>
       <Animated.View style={{ opacity: paginationOpacity || 1 }}>

@@ -7,14 +7,14 @@ import { Montserrat_500Medium, Montserrat_700Bold } from '@expo-google-fonts/mon
 import Login_section2 from '../../components/Login/Login_section2/Login_section2';
 import Button from '../../components/Button/Button';
 import { router, Link } from "expo-router";
-import Log_method from '../../components/Log_method/Log_method';
 import Signup_section2 from '../../components/Signup/Signup_section2/Signup_section2';
 import ThemeContext from '../../theme/ThemeContext';
 
 const signup = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   const back = () => {
-    router.push('lets');
+    // router.push('lets');
+    // Change lets to route to other page
   };
   return (
     <View style={[styles.container, {backgroundColor:theme.background}]}>
@@ -33,7 +33,6 @@ const signup = () => {
         <Text style={styles.or}>Or continue with</Text>
         <View style={styles.line}></View>
       </View>
-      <Log_method />
       <Text style={styles.bottom_text}>Already have an Account<Link href='/login' style={styles.link}> Log in</Link></Text>
       </ScrollView>
     </View>
