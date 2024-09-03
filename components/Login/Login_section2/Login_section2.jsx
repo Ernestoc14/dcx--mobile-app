@@ -14,6 +14,7 @@ import Login_section5 from '../Login_section5/Login_section5';
 import Login_section6 from '../Login_section6/Login_section6';
 import { router, Link } from "expo-router";
 
+// Login Screen New User
 const Login_section2 = () => {
     const { theme, darkMode } = useContext(ThemeContext);
     const [Passwordvisible, setPasswordvisible] = useState(false);
@@ -44,8 +45,8 @@ const Login_section2 = () => {
     return (
         <View>
             <View style={[styles.input_container]}>
-                <Input placeholder="Email" Icon={darkMode? Dark_mail : Mail} />
-                <Password passwordVisible={Passwordvisible} setPasswordVisible={setPasswordvisible} Icon={darkMode? Dark_security : Security} placeholder="password" />
+                <Input placeholder="Casillero DCX o Email" Icon={darkMode ? Dark_mail : Mail} />
+                <Password passwordVisible={Passwordvisible} setPasswordVisible={setPasswordvisible} Icon={darkMode ? Dark_security : Security} placeholder="Contraseña" />
             </View>
             <View style={styles.row}>
                 <View style={styles.switch_row}>
@@ -56,13 +57,13 @@ const Login_section2 = () => {
                         onValueChange={toggleSwitch}
                         value={isRemember}
                     />
-                    <Text style={styles.remember}>Remember Me</Text>
+                    <Text style={styles.remember}>Recuérdame</Text>
                 </View>
-                <Text style={styles.forget} onPress={openModal}>Forgot Password?</Text>
+                <Text style={styles.forget} onPress={openModal}>Olvidé mi contraseña</Text>
             </View>
-            <Button buttonText="login" onPress={() => {router.push('home')}} />
-            
-            <Login_section3 
+            <Button buttonText="Iniciar Sesión" onPress={() => { router.push('home') }} />
+
+            <Login_section3
                 modalVisible={modalVisible}
                 closeModal={closeModal}
                 openModal2={openModal2}
@@ -71,17 +72,17 @@ const Login_section2 = () => {
                 modalVisible2={modalVisible2}
                 closeModal2={closeModal2}
                 openModal3={openModal3}
-                />
-            <Login_section5 
+            />
+            <Login_section5
                 modalVisible3={modalVisible3}
                 closeModal3={closeModal3}
                 openModal4={openModal4}
             />
-             <Login_section6 
+            <Login_section6
                 modalVisible4={modalVisible4}
                 closeModal4={closeModal4}
             />
-            
+
         </View>
     );
 };
@@ -108,6 +109,7 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         fontFamily: 'SourceSansPro_400Regular',
         color: '#727272',
+        paddingLeft: 7
     },
     forget: {
         fontSize: 12,

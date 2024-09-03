@@ -26,14 +26,14 @@ const Input = ({
                 color: theme.color,
                 borderRadius: borderRadius || 6,
                 borderColor: borderColor || 'transparent',
-                backgroundColor:theme.card
+                backgroundColor: theme.card
               },
             ]}
             placeholderTextColor={darkMode ? '#ffffff' : '#808080'}
             placeholder={placeholder}
             keyboardType={keyboardType}
           />
-         {Icon && <Icon style={styles.icon} />}
+          {Icon && <Icon style={styles.icon} />}
         </View>
       </View>
     </View>

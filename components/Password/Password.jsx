@@ -17,7 +17,7 @@ const Password = ({ label, passwordVisible, setPasswordVisible, placeholder, key
                 {Icon && <Icon style={styles.icon} />}
                 <TextInput
                     style={[styles.passwordInput, { color: theme.color, backgroundColor:theme.card }]}
-                    placeholderTextColor={darkMode ? '#ffffff' : '#000000'}
+                    placeholderTextColor={darkMode ? '#ffffff' : '#808080'}
                     placeholder={placeholder}
                     secureTextEntry={!passwordVisible}
                     keyboardType={keyboardType}
