@@ -13,15 +13,18 @@ const Profile_setup_section2 = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <View style={styles.container}>
-        <View style={styles.input_container}>
-      <Input placeholder="Full Name" />
-      <Input placeholder="Nick Name" />
-      <DateInput placeholder="Date of birth"  />
-      <Input placeholder="Email" />
-      <Input placeholder="Phone Number" />
-      <GenderDropdown placeholder="Gender" />
+      <View style={styles.input_container}>
+        <Input placeholder="Nombre y Apellido" />
+        {/* # de Casillero Blockeado y Automatizado */}
+        <Input placeholder="Numero de Casillero" />
+        <Input placeholder="Email" />
+        <DateInput placeholder="Fecha de Nacimiento" />
+        <Input placeholder="Numero de Celular" />
+        <GenderDropdown placeholder="Sucursal" />
       </View>
-      <Button buttonText="Continue" onPress={() => {router.push('address')}}/>
+      <View style={styles.button_container}>
+        <Button buttonText="Continuar" onPress={() => { router.push('address') }} />
+      </View>
     </View>
   )
 }
@@ -32,5 +35,8 @@ const styles = StyleSheet.create({
   container: {
     paddingBottom: 60,
     flex: 1,
-  }
+  },
+  input_container: {
+    marginBottom: 120,
+  },
 })

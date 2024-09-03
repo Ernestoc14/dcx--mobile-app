@@ -32,7 +32,7 @@ const GenderDropdown = ({
             {
               color: theme.color,
               borderRadius: borderRadius || 6,
-              backgroundColor:theme.cardbg2,
+              backgroundColor: theme.cardbg2,
               borderColor: borderColor || 'transparent',
             },
           ]}
@@ -44,7 +44,7 @@ const GenderDropdown = ({
         </TouchableOpacity>
         {dropdownVisible && (
           <View style={styles.dropdown}>
-            {['Male', 'Female', 'Other'].map((gender, index) => (
+            {['Panama', 'Pese', 'Chiriqui'].map((gender, index) => (
               <TouchableOpacity key={index} style={styles.dropdownItem} onPress={() => selectGender(gender)}>
                 <Text style={styles.dropdownItemText}>{gender}</Text>
               </TouchableOpacity>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     position: 'absolute',
-    top: '60%',
+    top: '80%',
     left: 0,
     right: 0,
     backgroundColor: '#fff',

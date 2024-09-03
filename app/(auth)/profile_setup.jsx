@@ -15,19 +15,20 @@ const profile_setup = () => {
     router.push('signup');
   };
   return (
-    <View style={[styles.container, {backgroundColor:theme.background}]}>
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
       <View style={styles.header}>
         <TouchableOpacity onPress={back}>
-       {darkMode? <Dark_back /> : <Back />}
-       </TouchableOpacity>
-        <Text style={[styles.heading, {color:theme.color}]}>Fill Your Profile</Text>
+          {darkMode ? <Dark_back /> : <Back />}
+        </TouchableOpacity>
+        <Text style={[styles.heading, { color: theme.color }]}>Completa tu Perfil</Text>
       </View>
       <View style={styles.image_container}>
         <Image style={styles.image} source={Profile} alt='image' />
+        {/* Edit es solo una imagen */}
         <Edit style={styles.edit} />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-      <Profile_setup_section2 />
+        <Profile_setup_section2 />
       </ScrollView>
     </View>
   )
@@ -36,36 +37,36 @@ const profile_setup = () => {
 export default profile_setup;
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 50,
-        paddingHorizontal: 20,
-        flex: 1,
-    },
-    header: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 60,
-    },
-    heading: {
-         fontSize: 20,
-         lineHeight: 24,
-         fontFamily: 'Montserrat_700Bold',
-         color: '#39335E',
-         textTransform: 'capitalize',
-    },
-    image_container: {
-        alignItems:'center',
-        justifyContent: 'center',
-        marginVertical: 30,
-    },
-    image: {
-        position: 'relative',
-        width: 140,
-        height: 140,
-    },
-    edit: {
-        position: 'absolute',
-        right: 100,
-        bottom: 20,
-    }
+  container: {
+    paddingTop: 50,
+    paddingHorizontal: 20,
+    flex: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 60,
+  },
+  heading: {
+    fontSize: 20,
+    lineHeight: 24,
+    fontFamily: 'Montserrat_700Bold',
+    color: '#39335E',
+    textTransform: 'capitalize',
+  },
+  image_container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 30,
+  },
+  image: {
+    position: 'relative',
+    width: 140,
+    height: 140,
+  },
+  edit: {
+    position: 'absolute',
+    right: 100,
+    bottom: 20,
+  }
 })

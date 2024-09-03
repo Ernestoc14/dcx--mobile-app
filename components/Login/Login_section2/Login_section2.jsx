@@ -14,7 +14,7 @@ import Login_section5 from '../Login_section5/Login_section5';
 import Login_section6 from '../Login_section6/Login_section6';
 import { router, Link } from "expo-router";
 
-// Login Screen  (Iniciar Sesion)
+// Login Screen  (Iniciar Sesion) /login
 
 const Login_section2 = () => {
     const { theme, darkMode } = useContext(ThemeContext);

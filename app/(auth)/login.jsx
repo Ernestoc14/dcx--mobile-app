@@ -29,13 +29,9 @@ const login = () => {
           <Text style={[styles.heading_text, { color: theme.color3 }]}>Estamos felices de tenerte aqui en DCX.</Text>
         </View>
         <Login_section2 />
-        <View style={styles.bottom_row}>
-          <View style={styles.line}></View>
-          <Text style={styles.or}>Or continue with</Text>
-          <View style={styles.line}></View>
-        </View>
         <Text style={[styles.bottom_text, { color: theme.color3 }]}>
-          <Link href='/signup' style={styles.link}> Sign up</Link>
+          <Link href='/profile_setup' style={styles.link}>Crear Cuenta</Link>
+          ¿Aún no tienes casillero?
         </Text>
       </ScrollView>
     </View>
@@ -83,24 +79,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat_700Bold',
     color: '#836EFE',
   },
-  bottom_row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 5,
-    paddingHorizontal: 20,
-    marginLeft: -20,
-    marginVertical: 30,
-  },
   line: {
     borderBottomColor: '#9C9C9C',
     borderBottomWidth: 0.5,
     width: '35%',
     paddingTop: 2,
   },
-  or: {
-    fontSize: 12,
-    lineHeight: 15,
-    fontFamily: 'Montserrat_400Regular',
-    color: '#9C9C9C',
-  }
 })

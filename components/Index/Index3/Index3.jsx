@@ -10,8 +10,7 @@ const Index3 = ({ activePageIndex, totalPages, handleNextPress }) => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   const navigation = useNavigation();
   const handleCreateAccountPress = () => {
-    // router.push('');
-    // Redirect to Login Page
+    router.push('/login');
   };
   return (
     <View style={styles.page_button_container}>
