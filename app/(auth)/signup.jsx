@@ -13,7 +13,7 @@ import ThemeContext from '../../theme/ThemeContext';
 const signup = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   const back = () => {
-    // router.push('lets');
+    // router.push('');
     // Change lets to route to other page
   };
   return (

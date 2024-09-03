@@ -14,7 +14,7 @@ import ThemeContext from '../../theme/ThemeContext';
 const login = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   const back = () => {
-    router.push('lets');
+    // router.push('');
     // Redirect to new page
   };
   return (
