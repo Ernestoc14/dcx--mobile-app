@@ -8,6 +8,8 @@ import Button from '../../Button/Button';
 import { Montserrat_400Regular, Montserrat_600SemiBold } from '@expo-google-fonts/montserrat';
 import Otp from '../../OTP/Otp';
 
+// Email Verification Component
+
 const Login_section4 = ({ modalVisible2, closeModal2, openModal3 }) => {
     const { theme, darkMode } = useContext(ThemeContext);
 
@@ -22,14 +24,14 @@ const Login_section4 = ({ modalVisible2, closeModal2, openModal3 }) => {
                     <View style={[styles.modalContent, { backgroundColor: theme.background }]}>
                         <View style={styles.modal_header}>
                             <TouchableOpacity onPress={closeModal2}>
-                               {darkMode? <Dark_back /> : <Back />}
+                                {darkMode ? <Dark_back /> : <Back />}
                             </TouchableOpacity>
                             <Text style={[styles.heading, { color: theme.color }]}>Verification</Text>
                         </View>
-                        <Text style={[styles.head_text, {color:theme.color3}]}>Enter the 4 digits code that you received on your email.</Text>
+                        <Text style={[styles.head_text, { color: theme.color3 }]}>Enter the 4 digits code that you received on your email.</Text>
                         <Otp />
-                     <Button buttonText="continue" onPress={openModal3} />
-                     <Text style={[styles.bottom_text, {color:theme.color3}]}>By continuing, you agree to Shopping<Text style={styles.terms}> Conditions of Use</Text> and<Text style={styles.terms}> Privacy Notice</Text></Text>
+                        <Button buttonText="continue" onPress={openModal3} />
+                        <Text style={[styles.bottom_text, { color: theme.color3 }]}>By continuing, you agree to Shopping<Text style={styles.terms}> Conditions of Use</Text> and<Text style={styles.terms}> Privacy Notice</Text></Text>
                     </View>
                 </View>
             </Modal>

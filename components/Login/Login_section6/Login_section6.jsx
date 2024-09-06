@@ -9,6 +9,8 @@ import Button from '../../Button/Button';
 import { Montserrat_400Regular, Montserrat_600SemiBold } from '@expo-google-fonts/montserrat';
 import { router, Link } from "expo-router";
 
+// Successful Component (New Password Saved)
+
 const Login_section6 = ({ modalVisible4, closeModal4 }) => {
     const { theme, darkMode } = useContext(ThemeContext);
     return (
@@ -20,15 +22,15 @@ const Login_section6 = ({ modalVisible4, closeModal4 }) => {
             >
                 <View style={[styles.modalOverlay, { backgroundColor: theme.overlay }]}>
                     <View style={[styles.modalContent, { backgroundColor: theme.background }]}>
-                            <TouchableOpacity onPress={closeModal4}>
-                               {darkMode? <Dark_back /> : <Back />}
-                            </TouchableOpacity>
-                            <View style={styles.image_container}>
+                        <TouchableOpacity onPress={closeModal4}>
+                            {darkMode ? <Dark_back /> : <Back />}
+                        </TouchableOpacity>
+                        <View style={styles.image_container}>
                             <Success />
-                            </View>
-                            <Text style={[styles.heading, { color: theme.color }]}>Successful</Text>
-                        <Button buttonText="continue" onPress={() => {router.push('home')}} />
-                 </View>
+                        </View>
+                        <Text style={[styles.heading, { color: theme.color }]}>Successful</Text>
+                        <Button buttonText="continue" onPress={() => { router.push('home') }} />
+                    </View>
                 </View>
             </Modal>
         </View>

@@ -9,6 +9,8 @@ import Password from '../../Password/Password';
 import Button from '../../Button/Button';
 import { Montserrat_400Regular, Montserrat_600SemiBold } from '@expo-google-fonts/montserrat';
 
+// Reset Password Component
+
 const Login_section5 = ({ modalVisible3, closeModal3, openModal4 }) => {
     const { theme, darkMode } = useContext(ThemeContext);
     const [Passwordvisible2, setPasswordvisible2] = useState(false);
@@ -25,17 +27,17 @@ const Login_section5 = ({ modalVisible3, closeModal3, openModal4 }) => {
                     <View style={[styles.modalContent, { backgroundColor: theme.background }]}>
                         <View style={styles.modal_header}>
                             <TouchableOpacity onPress={closeModal3}>
-                              {darkMode? <Dark_back /> : <Back />}
+                                {darkMode ? <Dark_back /> : <Back />}
                             </TouchableOpacity>
                             <Text style={[styles.heading, { color: theme.color }]}>Reset Password</Text>
                         </View>
-                        <Text style={[styles.head_text, {color:theme.color3}]}>Set the new password for your account so you can login and access all the features.</Text>
+                        <Text style={[styles.head_text, { color: theme.color3 }]}>Set the new password for your account so you can login and access all the features.</Text>
                         <View style={styles.inputContainer}>
-                            <Password Icon={darkMode? Dark_Security : Security} placeholder="Password" passwordVisible={Passwordvisible2} setPasswordVisible={setPasswordvisible2} />
-                            <Password Icon={darkMode? Dark_Security : Security} placeholder="Confirm Password" passwordVisible={Passwordvisible3} setPasswordVisible={setPasswordvisible3} />
+                            <Password Icon={darkMode ? Dark_Security : Security} placeholder="Password" passwordVisible={Passwordvisible2} setPasswordVisible={setPasswordvisible2} />
+                            <Password Icon={darkMode ? Dark_Security : Security} placeholder="Confirm Password" passwordVisible={Passwordvisible3} setPasswordVisible={setPasswordvisible3} />
                         </View>
                         <Button buttonText="continue" onPress={openModal4} />
-                        <Text style={[styles.bottom_text, {color:theme.color3}]}>By continuing, you agree to Shopping<Text style={styles.terms}> Conditions of Use</Text> and<Text style={styles.terms}> Privacy Notice</Text></Text>
+                        <Text style={[styles.bottom_text, { color: theme.color3 }]}>By continuing, you agree to Shopping<Text style={styles.terms}> Conditions of Use</Text> and<Text style={styles.terms}> Privacy Notice</Text></Text>
                     </View>
                 </View>
             </Modal>
