@@ -13,15 +13,11 @@ import ThemeContext from '../../theme/ThemeContext';
 
 const login = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
-  const back = () => {
-    // router.push('');
-    // Redirect to new page
-  };
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-      <TouchableOpacity onPress={back}>
+      {/* <TouchableOpacity onPress={back}>
         {darkMode ? <Dark_back /> : <Back />}
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.head_content}>
           <Head />

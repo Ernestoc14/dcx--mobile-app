@@ -15,7 +15,7 @@ const { width } = Dimensions.get('window');
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const { theme,  darkMode } = useContext(ThemeContext);
+  const { theme, darkMode } = useContext(ThemeContext);
   const navigation = useNavigation();
   const swiperRef = useRef(null);
   const totalPages = pages.length;
@@ -80,7 +80,7 @@ export default function App() {
       <StatusBar
         translucent
         backgroundColor="transparent"
-        barStyle={darkMode? "light-content" : 'dark-content'}
+        barStyle={darkMode ? "light-content" : 'dark-content'}
       />
       <ScrollView
         horizontal
